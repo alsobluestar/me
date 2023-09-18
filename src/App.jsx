@@ -13,7 +13,7 @@ function App() {
                scale: 1.2,
                }}>
 
-        <Link text={ <div className="text-white w-fit text-6xl mb-3">:)</div>} link=""/>
+        <Link text={ <div className="text-white w-fit text-6xl mb-3">:)</div>} link="https://discord.gg/uSGVMe9Qmm"/>
 
        </motion.div>
 
@@ -32,6 +32,7 @@ function App() {
               <Link text="Instagram" link="https://instagram.com/bluestar.name" />,
 
               <Link text="Discord" link="https://discord.com/users/829156179803504670" />
+              
             </>
           }
         />
