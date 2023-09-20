@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import Paragraph from './Paragraph';
 import Link from './Link';
 import Clock from './Clock';
