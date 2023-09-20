@@ -8,14 +8,8 @@ function App() {
   return (
     <div className="mx-auto p-8 mt-16 md:mt-28 w-full h-screen text-white">
       <div>
-       <motion.div
-           whileTap={{
-               scale: 1.2,
-               }}>
+    <Link text={ <div className="text-white w-fit text-6xl mb-3">:)</div>} link="https://discord.gg/uSGVMe9Qmm"/>
 
-        <Link text={ <div className="text-white w-fit text-6xl mb-3">:)</div>} link="https://discord.gg/uSGVMe9Qmm"/>
-
-       </motion.div>
 
         <h1 className="mb-2 text-2xl md:text-4xl font-bold mb-4">There is no problem.</h1>
         <Logtext title="Hey there, I'm Mac, your everyday normal guy from Earth" content="" />
