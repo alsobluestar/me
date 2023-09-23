@@ -29,6 +29,17 @@ function App() {
             </>
           }
         />
+
+        <Logtext
+          title="SOURCE:"
+          content={
+            <>
+              <Link text="GITHUB" link="https://github.coml/alsobluestar/me" />,
+
+            </>
+          }
+        />
+
         <Clock />
       </div>
     </div>
