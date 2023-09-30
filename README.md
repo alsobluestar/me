@@ -1,4 +1,1 @@
-# MY RANDOM PROJECT
-
-
-this just a simple stuff.
+<samp>my bsod style website</samp>
