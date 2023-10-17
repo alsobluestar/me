@@ -1,1 +1,1 @@
-<samp>my bsod style website</samp>
+my website btw
