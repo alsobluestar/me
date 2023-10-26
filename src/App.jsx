@@ -50,7 +50,7 @@ const App = () => {
         <p className={cardContentClass}>{data[activeIndex].content}</p>
       </motion.div>
 
-      <div className="p-2" style={{ display: 'flex', alignItems: 'center' }}>
+      <div className="p-2 text-white" style={{ display: 'flex', alignItems: 'center' }}>
         <button className="text-2xl" onClick={handlePrev}><MdKeyboardArrowLeft /></button>
         <div className="p-2">{activeIndex + 1}/{data.length}</div>
         <button className="text-2xl" onClick={handleNext}><MdKeyboardArrowRight/></button>
