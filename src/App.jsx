@@ -6,7 +6,7 @@ const App = () => {
   const containerClass = "bg-[#28282B] min-h-screen flex flex-col items-center justify-center p-1";
   const cardClass = "bg-[#9C89B8] mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-[#F0E6EF] w-full md:w-2/3 lg:w-1/2";
   const sectionTitleClass = "text-xl font-bold mb-4";
-  const cardContentClass = "text-zinc-900 font-semibold";
+  const cardContentClass = "text-zinc-300 font-semibold";
 
   const data = [
     {
