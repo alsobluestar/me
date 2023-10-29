@@ -1,20 +1,16 @@
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
 import { useState } from 'react';
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from 'framer-motion';
+import useSound from 'use-sound';
+import pop from './mc-pop.mp3';
 
 const App = () => {
+  const [play] = useSound(pop);
 
-const containerClass = "bg-gray-900 min-h-screen flex flex-col items-center justify-center p-1";
-const cardClass = "bg-purple-800 mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-gray-200 w-full md:w-2/3 lg:w-1/2";
-const sectionTitleClass = "text-xl text-cyan-400 font-bold mb-4";
-const cardContentClass = "text-pink-300 font-semibold";
-
-
-	/*
-  const containerClass = "bg-[#28282B] min-h-screen flex flex-col items-center justify-center p-1";
-  const cardClass = "bg-[#9C89B8] mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-[#F0E6EF] w-full md:w-2/3 lg:w-1/2";
-  const sectionTitleClass = "text-xl text-[#d4d4d4] font-bold mb-4";
-  const cardContentClass = "text-zinc-300 font-semibold";*/
+  const containerClass = "bg-gray-900 min-h-screen flex flex-col items-center justify-center p-1";
+  const cardClass = "bg-purple-800 mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-gray-200 w-full md:w-2/3 lg:w-1/2";
+  const sectionTitleClass = "text-xl text-cyan-400 font-bold mb-4";
+  const cardContentClass = "text-pink-300 font-semibold";
 
   const data = [
     {
@@ -41,31 +37,31 @@ const cardContentClass = "text-pink-300 font-semibold";
     setActiveIndex((activeIndex + 1) % data.length);
   };
 
-  const handlePrev = () => {
-    setActiveIndex((activeIndex - 1 + data.length) % data.length);
-  };
-
   return (
     <div className={containerClass}>
       <motion.div
-	  initial={{ opacity: 0.5 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-
-          key={activeIndex}
-	  className={cardClass}>
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        key={activeIndex}
+        className={cardClass}>
         <h1 className={sectionTitleClass}>{data[activeIndex].title}</h1>
         <p className={cardContentClass}>{data[activeIndex].content}</p>
       </motion.div>
 
       <div className="p-2 text-white" style={{ display: 'flex', alignItems: 'center' }}>
-        <button className="text-2xl" onClick={handlePrev}><MdKeyboardArrowLeft /></button>
+        <button className="text-2xl" onClick={() => { handleNext(); play(); }}>
+          <MdKeyboardArrowLeft />
+        </button>
         <div className="p-2">{activeIndex + 1}/{data.length}</div>
-        <button className="text-2xl" onClick={handleNext}><MdKeyboardArrowRight/></button>
+        <button className="text-2xl" onClick={() => { handleNext(); play(); }}>
+          <MdKeyboardArrowRight />
+        </button>
       </div>
     </div>
   );
 }
 
 export default App;
+
 
