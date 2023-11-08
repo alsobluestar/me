@@ -7,11 +7,13 @@ import pop from './mc-pop.mp3';
 const App = () => {
   const [play] = useSound(pop);
 
-  const containerClass = "bg-gray-900 min-h-screen flex flex-col items-center justify-center p-1";
-  const cardClass = "bg-purple-800 mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-gray-200 w-full md:w-2/3 lg:w-1/2";
-  const sectionTitleClass = "text-xl text-cyan-400 font-bold mb-4";
-  const cardContentClass = "text-pink-300 font-semibold";
 
+  const containerClass = "bg-zinc-900 min-h-screen flex flex-col items-center justify-center p-1";
+  const cardClass = "bg-gray-800 mb-2 p-6 rounded-lg shadow-lg text-center border-2 border-gray-400 w-full md:w-2/3 lg:w-1/2";
+  const sectionTitleClass = "text-xl text-cyan-500 font-bold mb-4";
+  const cardContentClass = "text-pink-200 font-semibold";
+
+  
   const data = [
     {
       title: "Hey, I'm Mac (aka bluestar)",
